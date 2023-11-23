@@ -1,1 +1,10 @@
-# CCN-Models
+# CNN-Models
+
+I created two distinct models to delve into CNN architectures.
+
+In my initial model, called NWModel, I aimed to predict the genders of users within an active bank company. Firstly, I meticulously analyzed the dataset, checked for any missing values or duplicates, and then preprocessed the data to make it suitable for the model. After this data preparation phase, I proceeded with scaling and splitting the dataset. Initially, I employed the MLPClassifier, a fundamental neural network model. Subsequently, I developed my own neural network model comprising three layers, two of which utilized the 'relu' function as an activation function, while the third employed the 'sigmoid' function. I compiled my model using the 'adam' optimizer, utilized 'accuracy' as the metric for evaluation, and chose 'binary cross-entropy' as the loss function. I then trained the model and obtained the accuracy score for evaluation purposes.
+
+
+In my second model, titled CNN_Dog_or_Cat, the objective was to discern images belonging to cats from those belonging to dogs. To begin, I acquired the necessary data and constructed my database by combining file paths and labels. Subsequently, I conducted a thorough analysis of the dataset to prepare it for training. Following this, I partitioned the data into training and testing sets. For the training data, I created an image data iterator.
+I proceeded to design my neural network model, defining the input layer and incorporating various layers to process the input information. The model was compiled using the 'adam' optimizer, where 'accuracy' served as the metric for evaluation and 'binary cross-entropy' was selected as the loss function. During training, I monitored the validation loss, implementing a strategy to halt training if no improvement was observed, and adjusted the learning rate to mitigate overfitting.
+Upon completion of the training process, I evaluated my model's performance using the images and employed matplotlib and seaborn libraries to generate a heatmap visualization of the confusion matrix for better interpretation and analysis of the results.
